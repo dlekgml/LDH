@@ -1,0 +1,41 @@
+
+/*
+카멜케이스, 스네이크케이스
+카멜표기법-myPageInfo -> 가장 많이 사용
+스네이크표기법-my_page_info
+파스칼표기법-MyPageInfo
+헝가리안표기법-class_numTd
+*/
+
+.box{
+    border-collapse: collapse;
+}
+.box tr th{
+    border-bottom:3px sold gray
+}
+
+.num{
+    width:50px;
+    height:40px;
+}
+.score{
+    width:50px;
+}
+.rank{
+    width:40px;
+}
+.box tr td{
+    text-align: center;
+    height:30px;
+    border-bottom:1px solid gray
+}
+. nameTd{
+    font-weight:800;
+}
+.nameTd:hover{
+    background-color: cadetblue;
+    color:aliceblue;
+}
+.rankTd{
+    color:red;
+}
