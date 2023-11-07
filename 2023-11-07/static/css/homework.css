@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+#wrap{
+    width: 1000px;
+    margin:0 auto;
+    position:relative;
+}
+#header{
+    width: 100%;
+    padding:20px 0;
+    position: sticky;
+    top:0;
+    z-index: 100;
+    background: white;
+}
+.logowrap{width:100px; height:50px;}
+.menuWrap{
+    position: absolute;
+    left: 120px;
+    top: 0;
+}
+
+.nav{
+    position: relative;
+    line-height: 90px;
+}
+.menu{
+    width: 150px;
+    position: absolute;
+}
+.nav .menu:nth-child(2){
+    left: 150px;
+}
+.nav .menu:nth-child(3){
+    left: 300px;
+}
+.nav .menu:nth-child(4){
+    left: 450px;
+}    
+.nav .menu:nth-child(5){
+    left: 600px;
+}
+#main{
+    position:relative;
+    width:100%; 
+}
+.imgBox{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin-top: 15px;
+}
+.bee{
+        
+}
+#foot{
+    width: 100%;
+    padding: 50px;
+    background: khaki;
+    color: brown;
+}
