@@ -3,7 +3,7 @@
     padding:0;
 }
 #wrap{
-    width: 800px;
+    width: 700px;
     margin: 0 auto;
     position: relative;
 }
@@ -13,9 +13,8 @@
     background: lightblue;
     padding: 20px; 
 }    
-.menuWrap{
-   width: 100%;
-   margin:0 auto;
+.menuWrap{ 
+   width: 105.8%;
    background: skyblue;
 }
 .menu{
@@ -23,19 +22,80 @@
     padding: 10px 20px;
     position: relative;
 } 
-#siteDetail h4{
+.siteDetail h2{
+    position: relative;
+    width: 800px;
+    height: 50px;
+    line-height: 50px;
+
+}   
+.siteDetail h4{
+    position: relative;
     width: 350px;
+    margin-left: 360px;
+
 }   
 .siteDetail img{
     position: relative;
     width: 350px;
     height: 400px;
+    margin-top: -80px;
+
+}
+.freeSign{
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background: skyblue;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 3px 5px rgb(87, 136, 192);
+    margin-left: 550px;
+    margin-top: -495px;     
+}
+.devTool{
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background: skyblue;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0px 0px 3px 5px rgb(87, 136, 192);
+    margin-left: 650px;
+    margin-top: -30px;
+}
+
+.build img{
+    position: relative;
+    width: 170px;
+    height: 300px;
+    margin-left: 360px;
+    margin-top: 80px;
     
+}
+.build h3{
+    position: relative;
+    margin-left: 380px;
+    margin-top: 50px;
+
+}
+.learn img{
+    position: relative;
+    width: 170px;
+    height: 300px;
+    margin-left: 555px;
+    margin-top: -850px;
+}
+.learn h3{
+    position: relative;
+    margin-left: 600px;
+    margin-top: -72px
 }
 
 #footer{
-    width: 100%;
+    width: 97%;
     padding: 30px;
     background: rgb(25, 96, 119);
     color: white;
+    margin-top: 20px;
 }
