@@ -76,7 +76,7 @@
         // 3. 저장할 데이터가 문자열일 경우에는 반드시 큰따옴표 또는 작은 따옴표로 감싸기
         // 작성이 끝났으면 반드시 ;로 끝 맺음 해야 한다.
 
-    var num = 10;
+   // var num = 10;
     // 변수 생성시 변수의 사용 범위(scope)를 지정해주는게 좋다!!!
     // const는 상수를 의미
     // var, let 은 변수의 재사용, 재생성이 다르다.
@@ -85,13 +85,13 @@
     // const는 재사용과 재생성이 불가능하다.
  
 
-    num=20; // 재사용 가능
-    var num = 30; // 재생성 가능
-    let number = 10; // 초기 생성
-    number=20; // 재사용 
+  //  num=20; // 재사용 가능
+   // var num = 30; // 재생성 가능
+  //  let number = 10; // 초기 생성
+ //   number=20; // 재사용 
    // let number=30; // 재생성 불가능
     
-    const pi = 3.14; // 초기 생성
+  //  const pi = 3.14; // 초기 생성
     //pi = 3.44; // 재사용 불가
     //const pi=3.1444; // 재생성불가
 
@@ -105,25 +105,30 @@
     //prompt로 입력한 데이터는 문자열 데이터이다. 숫자를 입력해도 문자열이다.
     //숫자로 변환가능한 문자열데이터는 parseInt()를 통해 변환이 된다.
 
-    var age = parseInt ( prompt('만 나이를 입력하세요!') );
-    document.writeln(age); 
-    document.writeln( age+10);  // "20"+10
-    document.write("내 나이는 " + age + " 살 이다.")
-    document.write(" 태어난 년도는 " + (2023-age) + "년도 이다.<br>");
+    // var age = parseInt ( prompt('만 나이를 입력하세요!') );
+    // document.writeln(age); 
+    // document.writeln( age+10);  // "20"+10
+    // document.write("내 나이는 " + age + " 살 이다.")
+    // document.write(" 태어난 년도는 " + (2023-age) + "년도 이다.<br>");
 
     // 수학 계산식 모두 사용 가능하다.
     // result = num1 * 10 + num2 ;
 
     // 과제!!
     // 1. 사각형의 밑변과 높이를 입력받아 넓이를 구하여 출력하시오.
+    var base = parseInt ( prompt('밑변을 입력하세요'));
+    var height = parseInt ( prompt('높이를 입력하세요'));
+    document.write("넓이는 " + (base*height) + " 이다.")
     // 
-    // 2. var 빨간컵=15;
-    //    var 파랑컵=35;
-    //    var 하얀컵=0;
-    //    document.write("빨간컵 : " + 빨간컵 +" , 파랑컵 : "+ 파랑컵 );  
-    //      ?
-    //      ?
-    //      ?
+    // 2.
+        var 빨간컵=15;
+        var 파랑컵=35;
+        var 하얀컵=0;
+        document.write("빨간컵 : " + 빨간컵 +" , 파랑컵 : "+ 파랑컵 );  
+        하얀컵 = 파랑컵;
+        파랑컵 = 빨간컵;
+        빨간컵 = 하얀컵;  
+         
     //    document.write("빨간컵 : " + 빨간컵 +" , 파랑컵 : "+ 파랑컵);
     
     // 물음표 세개에 들어갈 알맞은 코드를 작성하시오.
