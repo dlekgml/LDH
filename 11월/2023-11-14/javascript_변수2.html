@@ -163,11 +163,11 @@
 // var result = (same==1) ? "모두같다" : "가장큰수 : "+big;
 // console.log(result);
 
-var coin = parseInt(Math.random()*2);
-//0. 앞면 1. 뒷면
-    var user = parseInt(prompt("0-앞면, 1-뒷면"));
-    var result = (coin == user) ? "정답" : "틀림";
-    console.log(result);
+// var coin = parseInt(Math.random()*2);
+// //0. 앞면 1. 뒷면
+//     var user = parseInt(prompt("0-앞면, 1-뒷면"));
+//     var result = (coin == user) ? "정답" : "틀림";
+//     console.log(result);
 
 // 기본 => 0~9까지
 // +1 => 1~10까지 
@@ -183,10 +183,19 @@ var coin = parseInt(Math.random()*2);
 // 단, 같은 숫자라면 비김
 //=> 두개의 정수 입력해서 누가 더 큰지 구하는것
 
+var dice1 = parseInt(Math.random()*6+1);
+var dice2 = parseInt(Math.random()*6+1);
+
+var result = ( dice1 > dice2 ) ? "승리" : "패배";
 
 
 
-console.log(num);
+
+
+
+
+
+//console.log(num);//
 
 </script>
 
