@@ -183,19 +183,66 @@
 // 단, 같은 숫자라면 비김
 //=> 두개의 정수 입력해서 누가 더 큰지 구하는것
 
-var dice1 = parseInt(Math.random()*6+1);
-var dice2 = parseInt(Math.random()*6+1);
+// var dice1 = parseInt(Math.random()*6)+1;
+// var dice2 = parseInt(Math.random()*6)+1;
+// var result = ( dice1 > dice2 ) ? "승리" : "패배";
+// result = (dice1 == dice2) ? "비김" : result;
+// // 한줄로 만드는법
+// // var result = (dice1 > dice2) ? "승리" : (dice1==dice2)? "비김":"패배";
+// //console.log(result);
+// //화면에 보이게 만드는법
+// console.log("나 : " +dice1+" 컴 : " +dice2+" 결과 : " + result);
 
-var result = ( dice1 > dice2 ) ? "승리" : "패배";
 
+// // 1. 소주 한잔을 마시면 수명이 2분 단축된다.
+// // 어떤 사람이 소주를 매일 같은 양으로 20년을 마셨다.
+// // 이사람이 하루에 몇잔의 소주를 마시는지 입력 받기
+// // 총 단축된 수명이 몇분인가?
+// // 총 단축된 수명이 몇시간인가? (정수만출력)
+// // 총 단축된 수명이 몇일인가? (정수만출력)
 
+// var alco = parseInt(prompt("하루 몇잔?"));
+// var life = alco*2*365*20;
+// console.log("총 단축된 수명 : " + life + "(분)");
+// console.log("총 단축된 수명 : " +(parseInt(life/60))+ "(시간)");
+// console.log("총 단축된 수명 : " +(parseInt(life/60/24))+ "(일)");
 
+// 2. 주사위게임
+// 컴퓨터와 나는 각자 주사위를 두개씩 던진다.
+// 주사위의 합이 큰쪽이 이긴다.
+// 내가 이겼는지 졌는지 비겼는지 출력하기
+// 단, 두개의 주사위 값이 1이 나오면 무조건 이긴다.
 
+var dice1 = parseInt(Math.random()*6)+1;
+var dice2 = parseInt(Math.random()*6)+1;
+var com = dice1+dice2;
+var dice3 = parseInt(Math.random()*6)+1;
+var dice4 = parseInt(Math.random()*6)+1;
+var user = dice3+dice4;
+var result =(user>com) ? (com != 2) ? "승리" : "패배" : 
+              (user == com) ? "비김" : (user == 2)?"승리" : "패배";
+console.log(`컴퓨터 : (${dice1},${dice2}) , 나 : (${dice3},${dice4}), 결과 : ${result}`);
 
+// 3. 주차비 정산
+// apple 주차장의 주차요금 표
+// 기본주차비 - 1000원, 기본시간 - 30분
+// (30분 이내 주차시 1000원, 5분 주차해도 1000원, 39분까지 1000원)
+// 10분다 100원씩 추가 (40분 주차시 1100원, 54분 주차시 1200원)
+// 2시간 이상 주차시 기본요금 변경
+//       기본요금 - 1500원
+//       (2시간 1분주차시 - 1500원, 2시간 34분주차시 - 1800원)
+// 주차시간을 분단위로 입력하여 주차요금이 얼마인지 출력하시오
 
+var time = parseInt(prompt("주차시간"));
+var cost = 1000;
+// 39-30 -> 9/10 -> 0.9 -> 0
+// 53-30 -> 23/10 -> 2.3 -> 2
+// 15-30 -> -15/10 -> -1.5 -> -1
+cost = (time >= 120) ? 1500 : cost;
+time = (time>=120) ? time-120: (time>=30) ? time-30: 0;
+var price = parseInt(time/10) * 100 + cost;
+console.log(`주차요금 : ${price}원`);
 
-
-//console.log(num);//
 
 </script>
 
