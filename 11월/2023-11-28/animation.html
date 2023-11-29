@@ -24,7 +24,7 @@
 
         */
 
-        #box{
+     /*   #box{
             width: 100px;
             height: 100px;
             background: red;
@@ -46,7 +46,7 @@
             position: absolute;
             top:150px;
             left: 100px;
-            animation: ball 1s ease ;
+            
         }
 
         @keyframes ball{
@@ -63,7 +63,7 @@
             height: 50px;
             background: black;
             top:50px; left: 400px;
-            animation: spectrum 3s infinite alternate;
+           
         }
         @keyframes spectrum{
             0%{ width: 200px; height:50px; top: 50px; opacity: 1;}
@@ -71,10 +71,32 @@
             40%{width: 200px; height:50px; top: 90px; opacity: 1;}
             60%{width: 50px; height:200px; top: 110px; opacity: 0.7;}
             80%{width: 200px; height:50px; top: 130px; opacity: 1;}
-            100%{width: 50px; height:200px; top: 150px; opacity: 0.7;}
+            100%{width: 50px; height:200px; top: 150px; opacity: 0.7;}  
+        } */
+
+        /*나만의 로딩애니메이션 만들기*/
+
+        #cir{
+            width:100px; height:100px;
+            background: rgb(32, 92, 175);
+            border: solid 10px transparent;
+            border-color: rgb(12, 42, 105) white white white;
+            border-radius: 100%;
+            position: relative;
+            top:150px;
+            left: 100px;
+            animation: rotate-loading 1s linear  infinite;
         }
 
-        <!--나만의 로딩애니메이션 만들기-->
+        @keyframes rotate-loading{
+            0%{rotate: 0;}
+            25%{rotate: 90deg;}
+            50%{rotate: 180deg;}
+            75%{rotate: 270deg;}           
+            100%{rotate: 360deg;}  
+        } 
+
+    
 
     </style>
 
@@ -86,6 +108,8 @@
     <div id="circle"></div>
 
     <div id="rect"></div>
+
+    <div id="cir"></div>
 
 </body>
 </html>
