@@ -7,7 +7,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
         <style>
-            #wrap{
+        /*    #wrap{
                 display: grid;
                 width: 500px;
                 grid-template-columns: repeat(4, 1fr);
@@ -32,53 +32,53 @@
                 border-bottom: 1px solid black;
                 padding-left: 10px;
                 padding-bottom: 10px;
-            }
+            }                               */
         </style>
 
         <script>
 
-            let oldNum =0; // 연산자 클릭 이전의 숫자 저장 변수
-            let op='';  // 클릭한 연산자 저장 변수
-            let nowNum =0; // 최근에 클릭한 숫자 저장 변수
+            // let oldNum =0; // 연산자 클릭 이전의 숫자 저장 변수
+            // let op='';  // 클릭한 연산자 저장 변수
+            // let nowNum =0; // 최근에 클릭한 숫자 저장 변수
 
 
-            $(function(){
-                $(".item").on("click", input );
-            });
-            function input(){
-                var div = $(this); // 클릭한 div 태그
-                var data = div.data("value");
+            // $(function(){
+            //     $(".item").on("click", input );
+            // });
+            // function input(){
+            //     var div = $(this); // 클릭한 div 태그
+            //     var data = div.data("value");
                 
-                data = (data === "=") ? calc(): operand( data , isNaN(data));    
+            //     data = (data === "=") ? calc(): operand( data , isNaN(data));    
                  
-                $("#res").append(data);
+            //     $("#res").append(data);
               
-            }
-            function calc(){  // = 요녀석을 클릭하면 oldnum과 nownum을 op에 맟춰서 계산
-                $("#res").empty(); //태그내부를 비워주는 함수
-                switch(op){
-                    case "+":
-                        return nowNum = oldNum + nowNum;
-                    case "-":
-                        return nowNum = oldNum - nowNum; 
-                    case "*":
-                        return nowNum = oldNum * nowNum;
-                    case "/":  
-                        return nowNum = oldNum / nowNum;         
-                }
-            }
+            // }
+            // function calc(){  // = 요녀석을 클릭하면 oldnum과 nownum을 op에 맟춰서 계산
+            //     $("#res").empty(); //태그내부를 비워주는 함수
+            //     switch(op){
+            //         case "+":
+            //             return nowNum = oldNum + nowNum;
+            //         case "-":
+            //             return nowNum = oldNum - nowNum; 
+            //         case "*":
+            //             return nowNum = oldNum * nowNum;
+            //         case "/":  
+            //             return nowNum = oldNum / nowNum;         
+            //     }
+            // }
 
 
-            function operand( d, isN){
-                if(isN){  // isNaN 이 true 라면 숫자변환불가(숫자가아니다), false면 숫자
-                   op-d; //클릭한 연산자를 op에 저장 
-                   oldNum = nowNum;  // 연산자클릭 했으니까 처음입력한 숫자를 oldnum에 옮기기
-                   nowNum=0;  // 두번째 숫자 입력받을수 있도록 0으로 초기화
-                }else{
-                   nowNum = nowNum*10 + Number(d); 
-                }
-                return d;
-            }
+            // function operand( d, isN){
+            //     if(isN){  // isNaN 이 true 라면 숫자변환불가(숫자가아니다), false면 숫자
+            //        op-d; //클릭한 연산자를 op에 저장 
+            //        oldNum = nowNum;  // 연산자클릭 했으니까 처음입력한 숫자를 oldnum에 옮기기
+            //        nowNum=0;  // 두번째 숫자 입력받을수 있도록 0으로 초기화
+            //     }else{
+            //        nowNum = nowNum*10 + Number(d); 
+            //     }
+            //     return d;
+            // }
 
 /*
     과제 
@@ -94,13 +94,38 @@
 
 */
 
-        </script>
+    </script>
+
+    <link rel="stylesheet" href="./static/css/game.css">
+
+    <script src="./static/javascript/game.js"></script>
+
 </head>
 <body>
+
+    <div id="screen">
+        <div id="comView">
+            <div class="com">
+                <img id="comImg">
+            </div>
+
+        </div>
+        <div id="userView">
+            <div class="user scissors"><img src="./static/image/scissors.png" alt="가위"></div>
+            <div class="user rock"><img src="./static/image/rock.png" alt="바위"></div>
+            <div class="user paper"><img src="./static/image/paper.png" alt="보"></div>
+        </div>
+        <div id="result">
+            <div class="bt"> <button id="start">시작</button></div>
+            <div class="res"></div>
+
+        </div>
+    </div>
+
     
     <!-- 계산기 
     dataset -> data-이름 = '데이터(값)'
-    -->
+
     <div id="wrap">
         <div class="item" data-value="7">7</div>
         <div class="item" data-value="8">8</div>
@@ -116,10 +141,10 @@
         <div class="item" data-value="*">*</div>
         <div class="item" data-value="0">0</div>
         <div class="item" data-value="=">=</div>
-        <div class="item" data-value="/">/</div>
+        <div class="item" data-value="/">/</div>   
     </div>
 
     <div id="res"></div>
-
+-->
 </body>
 </html>
