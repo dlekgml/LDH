@@ -19,6 +19,7 @@
 .zone{  
     border:1px solid white;
     background: khaki;
+    position: relative;
 }
 .top{height: 200px;}
 
@@ -65,7 +66,7 @@
     background-size: cover;
  }
  .zone .zone_name{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     font-family: "휴먼매직체";
     color:navy;
@@ -89,7 +90,7 @@
  }
  .pn{padding:5px; width: 100%;}
  .pn input[type=range]{
-    width: 170px;
+    width: 150px;
     -webkit-appearance: none;
      background: green;
      border-radius: 10px;
@@ -111,4 +112,51 @@
     float:right;
     font-size: 20px;
     padding: 3px 10px;
+}
+.meeple{
+    position:absolute;
+    font-size: 80px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
 } 
+
+img{
+    width: 100%;
+}
+
+#dice_wrap{
+    position: absolute;
+    width: 300px;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dice{
+    display: flex;
+    column-gap: 20px;
+}
+.dicebt{
+    margin-top: 20px;
+    text-align: center;
+}
+.dicebt button{
+    border: 0;
+    background: brown;
+    color: white;
+    font-size: 40px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 3px #222;
+    cursor: pointer;
+}
+.decebt button:active{
+    box-shadow: none;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.diceImg img{
+    box-shadow: 3px 3px 3px #111;
+    border-radius: 20px;
+}
