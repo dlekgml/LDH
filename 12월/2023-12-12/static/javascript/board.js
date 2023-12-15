@@ -4,9 +4,10 @@ function player(num, color){
     this.num=num;
     this.color=color;
     this.money=100; // 초기 게임머니 100만원
-    this.zone=new Array(); // 매입한 토지를 배열로 저장
+    this.zone=0; // 매입한 토지 수량 저장
     this.drift_turn=0; // 무인도 남은 턴
     this.location=0; // 현재위치
+    this.파산=false; // 자금부족으로 파산 한경우 true
 }
 
 
@@ -15,6 +16,7 @@ let fund=0; // 사회복지기금 모금 금액 저장 변수
 let island_ = new Array(); // 무인도에 도착한 플레이어
 let zone = new Array(); // 각 구역의 객체 저장 배열
 let player_list = new Array(); // 게임 참가자
+let 탑승객 = 0;  // 인천공항에 도착한 플레이어
 
 // 함수정의
 
@@ -49,7 +51,7 @@ function game_init(){
                 <input type = 'color' id='pcl${i}' value='${player_list[i-1].color}'>
                 <div class='state'>
                 자금 : <b id='pm${i}'>${player_list[i-1].money}만원</b>
-                보유도시 : <b id='pcity${i}'>${player_list[i-1].zone.length}개</b>
+                보유도시 : <b id='pcity${i}'>${player_list[i-1].zone}개</b>
                 </div>
             </div>`
         );
@@ -176,6 +178,8 @@ $(function(){
    });
    $("#player_number + label").text(2+"명");
 
+   $(".zone").on("click",airport_move);
+
 });
  
 // 0-복지기금, 8-공항, 16-기금납부, 23-무인도, 31-출발지
@@ -193,6 +197,7 @@ function welfare(gamer){ // 위치에 도착한 플레이어가 복지기금 전
     $("#pm"+gamer.num).text(gamer.money+"만원");
 }
 function airport(gamer){ // 플레이어가 원하는 곳으로 이동(마우스클릭)
+    alert("가고싶은 위치를 선택하세요.");
 
 }
 function fundpayment(gamer){ // 플레이어의 돈을 복지기금으로 지불(20만원)
@@ -203,11 +208,16 @@ function fundpayment(gamer){ // 플레이어의 돈을 복지기금으로 지불
 }
 
 function island(gamer){ // 3턴동안 탈출 불가
+    gamer.drift_turn=3;
+    island_.push(gamer.num);
 
 }
 function complete(gamer){ // 출발지를 도착하거나 통과하면 20만원 보너스
-
+    gamer.money += 20;
+    $("#pm"+gamer.num).text(gamer .money+"만원");
 }
+
+
 
 
 

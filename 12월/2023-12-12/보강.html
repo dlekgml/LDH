@@ -28,10 +28,13 @@
 </html>
 <script>
 
-     var tag = document.getElementsByTagName("body"); 
-     tag[0].children[3].children[1].children[0].innerHTML="커다란 고래가";
+    var body=document.getElementsByTagName("body");
 
-     $("body").children(".b").children("h4").children("p").html("커다란 고래가");
+    body[0].children[2].children[0].children[0].innerHTML="신나는 보강";
+    body[0].children[3].children[1].children[0].innerHTML="커다란 고래가";
+
+    console.log(body);
+
 
 
 // 네번째 div 안에 있는 텍스트중에서 p태그안의 텍스트를 "커다란 고래가" 로 변경
@@ -41,9 +44,10 @@
 // body변수를 이용해서 b태그의 텍스트를 "신나는 보강" 이라고 변경
 //   body[0].children[2].children[0].firstElementChild.innerHTML="신나는 보강";
 //   body[0].children[3].children[1].children[0].innerHTML="커다란 고래가";
+// $("body").children(".b").children("h4").children("p").html("커다란 고래가");
 
    //body[0].children[0].firstElementChild.innerHTML="변경 되나?";
    // $("#a"); // 제이쿼리
    // $(".b"); // 클래스
-    console.log(body);
+   // console.log(body);
 </script>
