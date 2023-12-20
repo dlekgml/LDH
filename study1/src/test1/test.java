@@ -7,7 +7,7 @@ public class test {
         System.out.println("나도 main 이네?");
         // 변수 - 데이터타입 지정;
         // 데이터 종류 - 정수, 실수, 문자, 논리
-        // 정수 - byte , short, int, long
+        // 정수 - byte , short, int, long (크기차이)
         int a=10;
         short b=20;
         long d=40;
